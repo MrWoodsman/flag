@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            background: #444;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flage_box {
+            display: flex;
+        }
+
+        .stick {
+            background: rgb(160, 107, 27);
+            width: 15px;
+            height: 275px;
+            transform: translateY(-15px);
+            position: relative;
+        }
+        .stick::before {
+            content: '';
+            width: 100%;
+            height: 8px;
+            background: rgb(131, 87, 22);;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+        }
+        .flag_box {
+            height: 125px;
+            aspect-ratio: 16/11;
+            position: relative;
+            display: flex;
+        }
+        .element {
+            width: calc(100% / 10);
+            height: 100%;
+        }
+        .element:before {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: rgb(204, 204, 204);;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+        }
+        .element div:nth-child(1) {
+            width: 100%;
+            height: 50%;
+            background-color: white;
+        }
+        .element div:nth-child(2) {
+            width: 100%;
+            height: 50%;
+            background-color: red;
+        }
+
+        .element {
+            animation: wave 750ms infinite;
+            animation-delay: var(--delay);
+        }
+        @keyframes wave {
+            50% {
+                transform: translateY(-15px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flage_box">
+        <div class="stick"></div>
+        <div class="flag_box">
+            <div class="element" style="--delay: 0ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 25ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 50ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 75ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 100ms"><div></div><div></div></div>
+            <!--  -->
+            <div class="element" style="--delay: 125ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 150ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 175ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 200ms"><div></div><div></div></div>
+            <div class="element" style="--delay: 225ms"><div></div><div></div></div>
+        </div>
+    </div>
+</body>
+</html>
