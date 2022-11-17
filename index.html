@@ -16,8 +16,8 @@
         .stick {
             background: rgb(160, 107, 27);
             width: 15px;
-            height: 275px;
-            transform: translateY(-15px);
+            height: 250px;
+            transform: translateY(-9px);
             position: relative;
         }
         .stick::before {
@@ -64,13 +64,14 @@
         .element {
             animation: wave 750ms infinite;
             animation-delay: var(--delay);
+            transform: translateY(7.5px);
         }
         @keyframes wave {
             50% {
-                transform: translateY(-15px);
+                transform: translateY(-7.5px);
             }
             to {
-                transform: translateY(0);
+                transform: translateY(7.5px);
             }
         }
     </style>
